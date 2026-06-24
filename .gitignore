@@ -1,0 +1,32 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Model checkpoints (large binaries; regenerate or obtain separately)
+*.pt
+*.pth
+*.gguf
+*.onnx
+*.safetensors
+
+# OS cruft
+.DS_Store
+Thumbs.db

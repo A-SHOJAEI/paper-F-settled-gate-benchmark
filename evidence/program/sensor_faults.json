@@ -1,0 +1,126 @@
+{
+  "experiment": "sensor_fault_taxonomy",
+  "actuator": "nominal (g=1, b=0); only the sensor is faulted",
+  "gate": "settled_science (0.2 deg held over dwell) scored on the TRUE state",
+  "n_faults": 50,
+  "n_seeds": 5,
+  "by_arm": {
+    "sensor_bias_0p1deg": {
+      "rma_student_latched": {
+        "settled_science_rate": 0.964,
+        "wilson95": [
+          0.933,
+          0.9809
+        ],
+        "final_deg_median": 0.1008
+      },
+      "teacher_privileged": {
+        "settled_science_rate": 1.0,
+        "wilson95": [
+          0.9849,
+          1.0
+        ],
+        "final_deg_median": 0.1006
+      }
+    },
+    "sensor_bias_0p2deg": {
+      "rma_student_latched": {
+        "settled_science_rate": 0.452,
+        "wilson95": [
+          0.3915,
+          0.514
+        ],
+        "final_deg_median": 0.2007
+      },
+      "teacher_privileged": {
+        "settled_science_rate": 0.452,
+        "wilson95": [
+          0.3915,
+          0.514
+        ],
+        "final_deg_median": 0.2009
+      }
+    },
+    "sensor_bias_0p3deg": {
+      "rma_student_latched": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 0.3003
+      },
+      "teacher_privileged": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 0.3
+      }
+    },
+    "sensor_bias_0p5deg": {
+      "rma_student_latched": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 0.4996
+      },
+      "teacher_privileged": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 0.4998
+      }
+    },
+    "star_tracker_dropout": {
+      "rma_student_latched": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 97.1869
+      },
+      "teacher_privileged": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 15.4862
+      }
+    },
+    "stuck_measurement": {
+      "rma_student_latched": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 85.5564
+      },
+      "teacher_privileged": {
+        "settled_science_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0151
+        ],
+        "final_deg_median": 26.4138
+      }
+    }
+  },
+  "classification": {
+    "sensor_bias_0p1deg": "controllable",
+    "sensor_bias_0p2deg": "controllable",
+    "sensor_bias_0p3deg": "shield-only",
+    "sensor_bias_0p5deg": "shield-only",
+    "star_tracker_dropout": "shield-only",
+    "stuck_measurement": "shield-only"
+  },
+  "finding": "Sensor bias is controllable within the 0.2 deg gate and offsets beyond it (the controller regulates the measured attitude, so the true attitude settles at -bias) -- the sensor-side analog of actuator GAIN_BIAS. Star-tracker dropout and a stuck attitude sensor are shield-only regimes (no position feedback -> cannot point), the sensor-side analog of the actuator TOTAL_LOSS class."
+}

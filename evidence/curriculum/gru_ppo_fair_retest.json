@@ -1,0 +1,648 @@
+{
+  "method": "GRU actor-critic, FAIR retest: [obs,prev_a,\u0394obs] features + recurrent (BPTT) PPO; sequence-BC + DAgger warm-start (real Basilisk, faults)",
+  "fixes_vs_audit": [
+    "features: obs-only -> [obs, delta_obs] (12-d); delta_obs makes the fault inferable via the recurrence. prev_action EXCLUDED: it induces imitation copycat-collapse in a direct-action policy (degenerate constant output).",
+    "PPO update: length-1 memoryless -> per-episode sequence BPTT (recurrence trained)"
+  ],
+  "headline": {
+    "bc_warmstart_gate_pct": 0.0,
+    "dagger_gate_pct": 0.0,
+    "final_gate_pct": 0.0,
+    "per_task_final": [
+      {
+        "task": {
+          "f": 1.3,
+          "fault": [
+            -1,
+            1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 23.301
+      },
+      {
+        "task": {
+          "f": 1.6,
+          "fault": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 20.259
+      },
+      {
+        "task": {
+          "f": 2.2,
+          "fault": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 22.479
+      }
+    ],
+    "note": "internal gate is the transient-min progress metric; the honest settled-gate head-to-head is run via program.rollout (gru_ppo_policy)."
+  },
+  "bc_eval": {
+    "aggregate_gate_pct": 0.0,
+    "per_task": [
+      {
+        "task": {
+          "f": 1.3,
+          "fault": [
+            -1,
+            1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 22.82
+      },
+      {
+        "task": {
+          "f": 1.6,
+          "fault": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 17.153
+      },
+      {
+        "task": {
+          "f": 2.2,
+          "fault": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 19.896
+      }
+    ]
+  },
+  "dagger_eval": {
+    "aggregate_gate_pct": 0.0,
+    "per_task": [
+      {
+        "task": {
+          "f": 1.3,
+          "fault": [
+            -1,
+            1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 12.65
+      },
+      {
+        "task": {
+          "f": 1.6,
+          "fault": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 22.018
+      },
+      {
+        "task": {
+          "f": 2.2,
+          "fault": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 21.202
+      }
+    ]
+  },
+  "final_eval": {
+    "aggregate_gate_pct": 0.0,
+    "per_task": [
+      {
+        "task": {
+          "f": 1.3,
+          "fault": [
+            -1,
+            1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 23.301
+      },
+      {
+        "task": {
+          "f": 1.6,
+          "fault": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 20.259
+      },
+      {
+        "task": {
+          "f": 2.2,
+          "fault": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        "gate_pct": 0.0,
+        "mean_best_deg": 22.479
+      }
+    ]
+  },
+  "dagger_history": [
+    {
+      "dagger_iter": 0,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.362
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 19.369
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 22.893
+        }
+      ]
+    },
+    {
+      "dagger_iter": 1,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 21.122
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 19.671
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 21.759
+        }
+      ]
+    },
+    {
+      "dagger_iter": 2,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 18.824
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 20.45
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 24.522
+        }
+      ]
+    },
+    {
+      "dagger_iter": 3,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 16.634
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 25.937
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 20.353
+        }
+      ]
+    },
+    {
+      "dagger_iter": 4,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 12.908
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 30.559
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 17.364
+        }
+      ]
+    },
+    {
+      "dagger_iter": 5,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 12.65
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 22.018
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 21.202
+        }
+      ]
+    }
+  ],
+  "ppo_history": [
+    {
+      "iter": 0,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 13.51
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 20.019
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 21.251
+        }
+      ]
+    },
+    {
+      "iter": 25,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.13
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 21.15
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.12
+        }
+      ]
+    },
+    {
+      "iter": 50,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.028
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 20.66
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.242
+        }
+      ]
+    },
+    {
+      "iter": 75,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.431
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 20.635
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.142
+        }
+      ]
+    },
+    {
+      "iter": 99,
+      "aggregate_gate_pct": 0.0,
+      "per_task": [
+        {
+          "task": {
+            "f": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 23.301
+        },
+        {
+          "task": {
+            "f": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 20.259
+        },
+        {
+          "task": {
+            "f": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ]
+          },
+          "gate_pct": 0.0,
+          "mean_best_deg": 22.479
+        }
+      ]
+    }
+  ],
+  "config": {
+    "hidden": 256,
+    "feat_dim": 12,
+    "bc_epochs": 40,
+    "ppo_iters": 100,
+    "gate_deg": 0.2,
+    "eval_episodes": 25
+  }
+}

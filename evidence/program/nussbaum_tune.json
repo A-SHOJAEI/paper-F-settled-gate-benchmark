@@ -1,0 +1,507 @@
+{
+  "experiment": "nussbaum_tune",
+  "provenance": "TRAIN SIGN+GAIN only (train_faults seed=1000, n=16 x 2 seeds); argmax mean settled-science; TEST split untouched. Chosen values become the ClassicalConfig nuss_* defaults.",
+  "grid": {
+    "nuss_gamma": [
+      0.2,
+      1.0,
+      5.0
+    ],
+    "nuss_lambda": [
+      0.13,
+      0.5
+    ],
+    "nuss_c": [
+      0.5,
+      1.5,
+      3.0
+    ],
+    "nuss_deadzone": [
+      0.0,
+      0.02
+    ]
+  },
+  "results": [
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.13,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.13,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.13,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.13,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.13,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.13,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.5,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.5,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.5,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.5,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.5,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 0.2,
+        "nuss_lambda": 0.5,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0938,
+        "gain": 0.25
+      },
+      "mean": 0.1719
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.125,
+        "gain": 0.2812
+      },
+      "mean": 0.2031
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.2188
+      },
+      "mean": 0.1406
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.1875
+      },
+      "mean": 0.125
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.1875
+      },
+      "mean": 0.125
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.125
+      },
+      "mean": 0.0781
+    },
+    {
+      "params": {
+        "nuss_gamma": 1.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.125
+      },
+      "mean": 0.0781
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.6562,
+        "gain": 0.625
+      },
+      "mean": 0.6406
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.375
+      },
+      "mean": 0.2031
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.2188,
+        "gain": 0.3438
+      },
+      "mean": 0.2813
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.2812
+      },
+      "mean": 0.1719
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.13,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.25
+      },
+      "mean": 0.1562
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0625,
+        "gain": 0.0938
+      },
+      "mean": 0.0781
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 0.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.0938
+      },
+      "mean": 0.0625
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.125
+      },
+      "mean": 0.0781
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 1.5,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.125
+      },
+      "mean": 0.0781
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.0
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.0938
+      },
+      "mean": 0.0625
+    },
+    {
+      "params": {
+        "nuss_gamma": 5.0,
+        "nuss_lambda": 0.5,
+        "nuss_c": 3.0,
+        "nuss_deadzone": 0.02
+      },
+      "train_settled": {
+        "sign": 0.0312,
+        "gain": 0.125
+      },
+      "mean": 0.0781
+    }
+  ],
+  "best": {
+    "params": {
+      "nuss_gamma": 5.0,
+      "nuss_lambda": 0.13,
+      "nuss_c": 0.5,
+      "nuss_deadzone": 0.0
+    },
+    "train_settled": {
+      "sign": 0.6562,
+      "gain": 0.625
+    },
+    "mean": 0.6406
+  }
+}

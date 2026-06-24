@@ -1,0 +1,265 @@
+{
+  "experiment": "rma_heldout_gain",
+  "fault_class": "GAIN",
+  "split": "test (structurally held out by construction)",
+  "n_faults": 50,
+  "n_seeds": 10,
+  "primary_gate": "settled_science (0.2 deg held over final dwell window)",
+  "latch_below_deg": 3.0,
+  "latch_provenance": "tuned on TRAIN GAIN faults (seed 1000); argmax over {0.5,1,2,3,5} deg",
+  "controllers": {
+    "pd_fault_unaware": {
+      "label": "heldout_gain::pd_fault_unaware",
+      "n_trials": 500,
+      "n_faults": 50,
+      "n_seeds": 10,
+      "errors": 0,
+      "settled_science": {
+        "rate": 0.0,
+        "k": 0,
+        "n": 500,
+        "wilson95": [
+          0.0,
+          0.0076
+        ]
+      },
+      "settled_operational": {
+        "rate": 0.0,
+        "k": 0,
+        "n": 500,
+        "wilson95": [
+          0.0,
+          0.0076
+        ]
+      },
+      "transient_min_science": {
+        "rate": 0.0,
+        "k": 0,
+        "n": 500,
+        "wilson95": [
+          0.0,
+          0.0076
+        ]
+      },
+      "settle_time_s": {
+        "median": null,
+        "iqr": null,
+        "n": 0
+      },
+      "transient_min_deg": {
+        "median": 12.2763,
+        "iqr": [
+          6.3285,
+          22.5694
+        ],
+        "n": 500
+      },
+      "final_deg": {
+        "median": 107.4197,
+        "iqr": [
+          98.893,
+          122.0228
+        ],
+        "n": 500
+      },
+      "config": {
+        "dt_s": 0.5,
+        "dwell_steps": 20,
+        "science_deg": 0.2,
+        "op_deg": 5.0
+      }
+    },
+    "rma_student_deployed": {
+      "label": "heldout_gain::rma_student_deployed",
+      "n_trials": 500,
+      "n_faults": 50,
+      "n_seeds": 10,
+      "errors": 0,
+      "settled_science": {
+        "rate": 0.596,
+        "k": 298,
+        "n": 500,
+        "wilson95": [
+          0.5524,
+          0.6381
+        ]
+      },
+      "settled_operational": {
+        "rate": 0.998,
+        "k": 499,
+        "n": 500,
+        "wilson95": [
+          0.9888,
+          0.9996
+        ]
+      },
+      "transient_min_science": {
+        "rate": 0.94,
+        "k": 470,
+        "n": 500,
+        "wilson95": [
+          0.9156,
+          0.9577
+        ]
+      },
+      "settle_time_s": {
+        "median": 144.25,
+        "iqr": [
+          131.5,
+          154.375
+        ],
+        "n": 298
+      },
+      "transient_min_deg": {
+        "median": 0.0272,
+        "iqr": [
+          0.0147,
+          0.0633
+        ],
+        "n": 500
+      },
+      "final_deg": {
+        "median": 0.0738,
+        "iqr": [
+          0.0259,
+          0.5114
+        ],
+        "n": 500
+      },
+      "config": {
+        "dt_s": 0.5,
+        "dwell_steps": 20,
+        "science_deg": 0.2,
+        "op_deg": 5.0
+      }
+    },
+    "rma_student_latched": {
+      "label": "heldout_gain::rma_student_latched",
+      "n_trials": 500,
+      "n_faults": 50,
+      "n_seeds": 10,
+      "errors": 0,
+      "settled_science": {
+        "rate": 0.944,
+        "k": 472,
+        "n": 500,
+        "wilson95": [
+          0.9203,
+          0.961
+        ]
+      },
+      "settled_operational": {
+        "rate": 0.998,
+        "k": 499,
+        "n": 500,
+        "wilson95": [
+          0.9888,
+          0.9996
+        ]
+      },
+      "transient_min_science": {
+        "rate": 0.974,
+        "k": 487,
+        "n": 500,
+        "wilson95": [
+          0.956,
+          0.9847
+        ]
+      },
+      "settle_time_s": {
+        "median": 139.75,
+        "iqr": [
+          128.5,
+          150.625
+        ],
+        "n": 472
+      },
+      "transient_min_deg": {
+        "median": 0.02,
+        "iqr": [
+          0.0126,
+          0.0337
+        ],
+        "n": 500
+      },
+      "final_deg": {
+        "median": 0.0253,
+        "iqr": [
+          0.0155,
+          0.0429
+        ],
+        "n": 500
+      },
+      "config": {
+        "dt_s": 0.5,
+        "dwell_steps": 20,
+        "science_deg": 0.2,
+        "op_deg": 5.0
+      }
+    },
+    "teacher_privileged": {
+      "label": "heldout_gain::teacher_privileged",
+      "n_trials": 500,
+      "n_faults": 50,
+      "n_seeds": 10,
+      "errors": 0,
+      "settled_science": {
+        "rate": 1.0,
+        "k": 500,
+        "n": 500,
+        "wilson95": [
+          0.9924,
+          1.0
+        ]
+      },
+      "settled_operational": {
+        "rate": 1.0,
+        "k": 500,
+        "n": 500,
+        "wilson95": [
+          0.9924,
+          1.0
+        ]
+      },
+      "transient_min_science": {
+        "rate": 1.0,
+        "k": 500,
+        "n": 500,
+        "wilson95": [
+          0.9924,
+          1.0
+        ]
+      },
+      "settle_time_s": {
+        "median": 127.5,
+        "iqr": [
+          111.5,
+          135.0
+        ],
+        "n": 500
+      },
+      "transient_min_deg": {
+        "median": 0.0096,
+        "iqr": [
+          0.0055,
+          0.0137
+        ],
+        "n": 500
+      },
+      "final_deg": {
+        "median": 0.0117,
+        "iqr": [
+          0.0066,
+          0.0168
+        ],
+        "n": 500
+      },
+      "config": {
+        "dt_s": 0.5,
+        "dwell_steps": 20,
+        "science_deg": 0.2,
+        "op_deg": 5.0
+      }
+    }
+  }
+}

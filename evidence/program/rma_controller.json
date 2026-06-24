@@ -1,0 +1,82 @@
+{
+  "pd_fault_unaware": {
+    "gate_success_rate": 0.0,
+    "wilson_95ci": [
+      0.0,
+      0.0876
+    ],
+    "diverged_rate": 0.825,
+    "median_best_pointing_deg": 13.428,
+    "n": 40
+  },
+  "nominal_bc": {
+    "gate_success_rate": 0.0,
+    "wilson_95ci": [
+      0.0,
+      0.0876
+    ],
+    "diverged_rate": 0.85,
+    "median_best_pointing_deg": 13.004,
+    "n": 40
+  },
+  "rma_teacher_privileged": {
+    "gate_success_rate": 1.0,
+    "wilson_95ci": [
+      0.9124,
+      1.0
+    ],
+    "diverged_rate": 0.0,
+    "median_best_pointing_deg": 0.008,
+    "n": 40
+  },
+  "rma_student_inferred": {
+    "gate_success_rate": 1.0,
+    "wilson_95ci": [
+      0.9124,
+      1.0
+    ],
+    "diverged_rate": 0.0,
+    "median_best_pointing_deg": 0.017,
+    "n": 40
+  },
+  "continuous__pd_fault_unaware": {
+    "gate_success_rate": 0.1,
+    "wilson_95ci": [
+      0.0396,
+      0.2305
+    ],
+    "diverged_rate": 0.825,
+    "median_best_pointing_deg": 14.913,
+    "n": 40
+  },
+  "continuous__nominal_bc": {
+    "gate_success_rate": 0.1,
+    "wilson_95ci": [
+      0.0396,
+      0.2305
+    ],
+    "diverged_rate": 0.85,
+    "median_best_pointing_deg": 15.495,
+    "n": 40
+  },
+  "continuous__rma_teacher_privileged": {
+    "gate_success_rate": 1.0,
+    "wilson_95ci": [
+      0.9124,
+      1.0
+    ],
+    "diverged_rate": 0.0,
+    "median_best_pointing_deg": 0.01,
+    "n": 40
+  },
+  "continuous__rma_student_inferred": {
+    "gate_success_rate": 0.95,
+    "wilson_95ci": [
+      0.835,
+      0.9862
+    ],
+    "diverged_rate": 0.0,
+    "median_best_pointing_deg": 0.025,
+    "n": 40
+  }
+}

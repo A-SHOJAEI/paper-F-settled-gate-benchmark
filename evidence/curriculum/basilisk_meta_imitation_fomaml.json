@@ -1,0 +1,1806 @@
+{
+  "method": "FOMAML meta-imitation + DAgger adaptation for fault-adaptive control (real Basilisk)",
+  "task_family": "inertia scale \u00d7 actuator-sign fault (unobserved, multimodal)",
+  "train_tasks": [
+    {
+      "f": 0.8,
+      "fault": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "f": 1.5,
+      "fault": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "f": 0.9,
+      "fault": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "f": 1.7,
+      "fault": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "f": 1.2,
+      "fault": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "f": 2.0,
+      "fault": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "f": 0.7,
+      "fault": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "f": 1.4,
+      "fault": [
+        1,
+        1,
+        -1
+      ]
+    }
+  ],
+  "test_tasks": [
+    {
+      "f": 1.1,
+      "fault": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "f": 1.3,
+      "fault": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "f": 1.6,
+      "fault": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "f": 2.2,
+      "fault": [
+        -1,
+        -1,
+        1
+      ]
+    }
+  ],
+  "fomaml_final_train_query_mse": 8e-05,
+  "primary_dagger_success_curve": {
+    "meta_fomaml": [
+      {
+        "dagger_iters": 0,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 8.718576114559317
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.76465726239067
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.185926072011636
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.539058600022212
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 18.55205451224596,
+        "label": "FOMAML"
+      },
+      {
+        "dagger_iters": 1,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.314051513927872
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 19.69817398783926
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 17.710751805554576
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.445891766789785
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 20.292217268527875,
+        "label": "FOMAML"
+      },
+      {
+        "dagger_iters": 2,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 29.313209104644947
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 24.657629995763315
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 19.28270120621758
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 25.566725710200636
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 24.70506650420662,
+        "label": "FOMAML"
+      },
+      {
+        "dagger_iters": 3,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 14.688102332694015
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.943253485127023
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.930381885086582
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.901252757868416
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 20.61574761519401,
+        "label": "FOMAML"
+      },
+      {
+        "dagger_iters": 4,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 4.198336277830323
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.160281366195573
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 16.573653804628172
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.70892307757096
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 15.910298631556255,
+        "label": "FOMAML"
+      }
+    ],
+    "pooled_bc": [
+      {
+        "dagger_iters": 0,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 3.9096808793860665
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.74600967023282
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.461760082315376
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.096937647071616
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 17.80359706975147,
+        "label": "pooled-BC"
+      },
+      {
+        "dagger_iters": 1,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 16.056411973474134
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.443009771981856
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 18.991781565354827
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.253094749246625
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 19.18607451501436,
+        "label": "pooled-BC"
+      },
+      {
+        "dagger_iters": 2,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 17.368458795979222
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 26.230625425317317
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 18.194955947480498
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.748428368947298
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 20.885617134431083,
+        "label": "pooled-BC"
+      },
+      {
+        "dagger_iters": 3,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.479892475385228
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 29.03086319412854
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 28.317815418532646
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.434101646878297
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 25.815668183731177,
+        "label": "pooled-BC"
+      },
+      {
+        "dagger_iters": 4,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 2.1392816512785755
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 17.261657166584797
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 16.05625605152838
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.952733366204594
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 14.102482058899088,
+        "label": "pooled-BC"
+      }
+    ]
+  },
+  "control_offline_mse_curve": {
+    "meta_fomaml": [
+      {
+        "adapt_steps": 0,
+        "mean_query_mse": 0.00023777550632075872,
+        "per_task_mse": [
+          3.8e-05,
+          0.000216,
+          0.00024,
+          0.000457
+        ]
+      },
+      {
+        "adapt_steps": 5,
+        "mean_query_mse": 0.00023255601718119578,
+        "per_task_mse": [
+          3.5e-05,
+          0.000213,
+          0.000235,
+          0.000448
+        ]
+      },
+      {
+        "adapt_steps": 10,
+        "mean_query_mse": 0.00023201522344606929,
+        "per_task_mse": [
+          3.4e-05,
+          0.000213,
+          0.000234,
+          0.000447
+        ]
+      },
+      {
+        "adapt_steps": 20,
+        "mean_query_mse": 0.00023234587661136175,
+        "per_task_mse": [
+          3.4e-05,
+          0.000214,
+          0.000233,
+          0.000448
+        ]
+      },
+      {
+        "adapt_steps": 40,
+        "mean_query_mse": 0.00023250833146448713,
+        "per_task_mse": [
+          3.4e-05,
+          0.000214,
+          0.000233,
+          0.000449
+        ]
+      }
+    ],
+    "pooled_bc": [
+      {
+        "adapt_steps": 0,
+        "mean_query_mse": 0.00023242974475579103,
+        "per_task_mse": [
+          3.4e-05,
+          0.000216,
+          0.000226,
+          0.000453
+        ]
+      },
+      {
+        "adapt_steps": 5,
+        "mean_query_mse": 0.00023118779245123733,
+        "per_task_mse": [
+          3.4e-05,
+          0.000216,
+          0.000226,
+          0.000449
+        ]
+      },
+      {
+        "adapt_steps": 10,
+        "mean_query_mse": 0.00023126397354644723,
+        "per_task_mse": [
+          3.4e-05,
+          0.000216,
+          0.000227,
+          0.000449
+        ]
+      },
+      {
+        "adapt_steps": 20,
+        "mean_query_mse": 0.00023173668887466192,
+        "per_task_mse": [
+          3.4e-05,
+          0.000216,
+          0.000227,
+          0.00045
+        ]
+      },
+      {
+        "adapt_steps": 40,
+        "mean_query_mse": 0.00023198694725579116,
+        "per_task_mse": [
+          3.4e-05,
+          0.000216,
+          0.000228,
+          0.000451
+        ]
+      }
+    ]
+  },
+  "control_offline_success_curve": {
+    "meta_fomaml": [
+      {
+        "adapt_steps": 0,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 8.718576114559317
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.76465726239067
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.185926072011636
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.539058600022212
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 18.55205451224596,
+        "label": "FOMAML-offline"
+      },
+      {
+        "adapt_steps": 5,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 6.96487871239391
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.737087648419315
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.228797072760624
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.381828437269643
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 18.328147967710873,
+        "label": "FOMAML-offline"
+      },
+      {
+        "adapt_steps": 10,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 6.498622393129832
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.594007604521458
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.835211695127217
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.3406431434697
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 18.31712120906205,
+        "label": "FOMAML-offline"
+      },
+      {
+        "adapt_steps": 20,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 6.5753976532232015
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.557274285129292
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.262975626505266
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.24783633507037
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 18.410870974982032,
+        "label": "FOMAML-offline"
+      },
+      {
+        "adapt_steps": 40,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 6.647309939463655
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.61195046928195
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 20.96555621647402
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.30035787523276
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 18.381293625113095,
+        "label": "FOMAML-offline"
+      }
+    ],
+    "pooled_bc": [
+      {
+        "adapt_steps": 0,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 3.9096808793860665
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.74600967023282
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.461760082315376
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.096937647071616
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 17.80359706975147,
+        "label": "pooledBC-offline"
+      },
+      {
+        "adapt_steps": 5,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 1.885577007445419
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.0423191661845
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.200636732795484
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.669364360804384
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 17.449474316807446,
+        "label": "pooledBC-offline"
+      },
+      {
+        "adapt_steps": 10,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 1,
+            "n": 25,
+            "success_rate": 0.04,
+            "wilson_95ci": [
+              0.007096050386699165,
+              0.19544472405022525
+            ],
+            "best_pointing_deg_mean": 2.3863100895859306
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.06785544567398
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.663822483502727
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.633881490549108
+          }
+        ],
+        "aggregate_successes": 1,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.01,
+        "wilson_95ci": [
+          0.0017673865655472645,
+          0.0544875247609346
+        ],
+        "mean_best_pointing_deg": 17.437967377327936,
+        "label": "pooledBC-offline"
+      },
+      {
+        "adapt_steps": 20,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 3.127355674174122
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.009713656338487
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.904761258850854
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 22.821886895601278
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 17.715929371241184,
+        "label": "pooledBC-offline"
+      },
+      {
+        "adapt_steps": 40,
+        "per_task": [
+          {
+            "inertia_factor": 1.1,
+            "fault": [
+              1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 3.399415802403181
+          },
+          {
+            "inertia_factor": 1.3,
+            "fault": [
+              -1,
+              1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.06977397069269
+          },
+          {
+            "inertia_factor": 1.6,
+            "fault": [
+              1,
+              1,
+              -1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 21.872527101215354
+          },
+          {
+            "inertia_factor": 2.2,
+            "fault": [
+              -1,
+              -1,
+              1
+            ],
+            "successes": 0,
+            "n": 25,
+            "success_rate": 0.0,
+            "wilson_95ci": [
+              0.0,
+              0.13319649395317873
+            ],
+            "best_pointing_deg_mean": 23.06243195677913
+          }
+        ],
+        "aggregate_successes": 0,
+        "aggregate_n": 100,
+        "aggregate_success_rate": 0.0,
+        "wilson_95ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "mean_best_pointing_deg": 17.85103720777259,
+        "label": "pooledBC-offline"
+      }
+    ]
+  },
+  "headline": {
+    "metric": "closed-loop success on held-out faults after on-policy DAgger adaptation",
+    "dagger_meta_zeroshot_pct": 0.0,
+    "dagger_meta_best_pct": 0.0,
+    "dagger_meta_best_iters": 0,
+    "dagger_pooled_zeroshot_pct": 0.0,
+    "dagger_pooled_best_pct": 0.0,
+    "dagger_fomaml_advantage_pct_pts": 0.0,
+    "offline_meta_best_pct": 0.0,
+    "offline_pooled_best_pct": 1.0,
+    "offline_mse_flat_note": "offline few-shot MSE ~0.00024 flat across budgets \u2014 covariate-shift null"
+  },
+  "config": {
+    "meta_iters": 600,
+    "inner_steps": 5,
+    "inner_lr": 0.05,
+    "dagger_iters": 4,
+    "dagger_episodes": 3,
+    "dagger_fit_steps": 60,
+    "adapt_lr": 0.05,
+    "eval_episodes": 25,
+    "demo_episodes": 8
+  }
+}

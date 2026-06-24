@@ -1,0 +1,7 @@
+# Runtime dependencies for this paper's replication code.
+numpy>=1.24
+torch>=2.0          # learned controller / commander modules
+
+# Optional, gated deps (the pure-NumPy reproduce paths do not need these):
+# Basilisk 6-DOF astrodynamics simulator -- install with:  pip install bsk
+# Kind 2 model checker (Docker image) -- only to re-run the shield proofs.
